@@ -40,12 +40,37 @@
 
 
     </audio>
+
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
+<style>
+    .play-music-button {
+        position: fixed;
+        bottom: 20px;
+        /* Adjust as needed */
+        left: 10%;
+        transform: translateX(10%);
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 80%;
+        padding: 10px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    /* Adjust icon size and color as needed */
+    
+    .play-music-button svg {
+        width: 24px;
+        height: 24px;
+        fill: white;
+    }
+</style>
 
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98" background="dark">
 
@@ -86,10 +111,10 @@
                 <div class="row ">
                     <div class="col-lg-12 ">
                         <div class="title-box ">
-                            <h2><span>DANDEN-1 GRUP C PASPAMPRES </span>
+                            <h2><span>UNDANGAN </span>
                             </h2>
 
-                            <p class="text-white ">UNDANGAN ACARA PENYERAHAN JABATAN KOMANDAN DETASEMEN-1 GRUP C PASPAMPRES.</p>
+                            <p class="text-white "> ACARA PENYERAHAN JABATAN <br> KOMANDAN DETASEMEN-1 GRUP C PASPAMPRES.</p>
                         </div>
 
                         <div class="img-profil text-center ">
@@ -126,7 +151,7 @@
                 <div class="timeline-date-panel col-xs-12 col-md-6 align-left ">
                     <div class="time-line-date-content ">
                         <p class="mbr-timeline-date mbr-fonts-style display-font ">
-                            21 Februari 2024
+                            Rabu, 21 Februari 2024
                             <br> <span style="font-size: 22px; ">08.00 WIB - Selesai
                             </span></p>
 
@@ -137,7 +162,7 @@
                     <div class="timeline-text-content ">
                         <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-font ">Lokasi</h4>
                         <p class="mbr-timeline-text mbr-fonts-style display-7 ">
-                            <a href="https://maps.app.goo.gl/rKux7cF7obZawLie9" target="_blank">📍 Lapangan Hijau Mako Grup C Paspampres,
+                            <a href="https://maps.app.goo.gl/uB4byUVpvbek21G9A" target="_blank">📍 Lapangan Hijau Mako Grup C Paspampres,
                                 Lawanggintung Bogor</a>
                         </p>
                     </div>
@@ -224,7 +249,26 @@
         </div>
     </div>
     <!-- End Contact -->
+    <button class="play-music-button" onclick="toggleMusic()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="none" d="M0 0h24v24H0V0z"/>
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+    </button>
 
+    <audio id="myAudio" src="song.mp3"></audio>
+
+    <script>
+        var audio = document.getElementById('myAudio');
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
     <!-- Start Footer -->
     <footer class="footer-box ">
         <div class="container ">
